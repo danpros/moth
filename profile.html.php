@@ -5,7 +5,7 @@
 </style>
 <article class="post post--text">
     <header class="post__header">
-        <h1 class="post__title"><?php echo $name ?></h1>
+        <h1 class="post__title" style="margin-bottom:20px;"><?php echo $name ?></h1>
     </header>
     <div class="post__content">
 		<div class="page-header">
