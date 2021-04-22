@@ -76,8 +76,7 @@
 		</div><!-- /.main -->
 
 		<footer class="footer" role="contentinfo">
-			<style>.footer p {display:inline;margin-right:5px;line-height:0;}</style>
-			<small><?php echo copyright();?><p>Designed by <a href="https://themegrinders.tumblr.com/" rel="nofollow" target="_blank">Theme Grinders</a>.</p></small>
+			<small><?php echo copyright();?> <span>Designed by <a href="https://themegrinders.tumblr.com/" rel="nofollow" target="_blank">Theme Grinders</a>.</span></small>
 		</footer><!-- /.footer -->
 	</div><!-- /.wrapper -->
 

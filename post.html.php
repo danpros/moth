@@ -13,7 +13,7 @@
 		</h1><!-- /.post__title -->
 
 		<span class="post__date">Posted <a href="<?php echo $p->url;?>"><time class="entry-date published updated"><?php echo format_date($p->date) ?></time></a> by 
-		<a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a> in 
+		<a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> in 
 		<?php echo $p->category;?>
 		<?php if (login()) { echo '<span class="sep"> |</span> <span><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
 		</span>
