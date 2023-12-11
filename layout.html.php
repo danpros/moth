@@ -1,6 +1,6 @@
 <?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!DOCTYPE html>
-<html lang="<?php echo str_replace('_', '-', config('language'));?>">
+<html lang="<?php echo blog_language();?>">
 <head>
 <!-- Moth v1.1.0 | Copyright © 2015 by Theme Grinders -->
 <?php echo head_contents();?>
@@ -11,14 +11,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika Negative:300,400,700">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue:300,400,700">
-	<link rel="stylesheet" href="<?php echo site_url();?>themes/moth/css/moth.css">
-<?php     
-    if (isset($_GET['search'])) {
-        $search = _h($_GET['search']);
-        $url = site_url() . 'search/' . remove_accent($search);
-        header("Location: $url");
-    }
-?>
+	<link rel="stylesheet" href="<?php echo theme_path();?>css/moth.css">
 </head>
 <body class="index">
 <?php if (facebook()) { echo facebook(); } ?>
@@ -53,7 +46,7 @@
 				<header class="header" role="banner">
 					<div class="header__inner">
 						<a href="<?php echo site_url();?>" class="avatar header__avatar">
-							<img src="<?php echo site_url();?>themes/moth/img/avatar.jpg" alt="<?php echo blog_title();?>" class="avatar__photo" width="60" height="60">
+							<img src="<?php echo theme_path();?>img/avatar.jpg" alt="<?php echo blog_title();?>" class="avatar__photo" width="60" height="60">
 						</a><!-- /.avatar -->
 
 						<h1 class="header__title">
