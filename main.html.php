@@ -3,13 +3,13 @@
     <header class="page-header"><h1 class="page-title"><?php echo i18n('Category');?>: <?php echo $category->title;?></h1><div class="taxonomy-description"><?php echo $category->body;?></div></header>
 <?php endif;?>
 <?php if (isset($is_tag)):?>
-    <header class="page-header"><h1 class="page-title">Tag: <?php echo $tag->title;?></h1></header>
+    <header class="page-header"><h1 class="page-title"><?php echo i18n("Tags");?>: <?php echo $tag->title;?></h1></header>
 <?php endif;?>
 <?php if (isset($is_archive)):?>
-    <header class="page-header"><h1 class="page-title">Archive: <?php echo $archive->title;?></h1></header>
+    <header class="page-header"><h1 class="page-title"><?php echo i18n("Archives");?>: <?php echo $archive->title;?></h1></header>
 <?php endif;?>
 <?php if (isset($is_search)):?>
-    <header class="page-header"><h1 class="page-title">Search: <?php echo $search->title;?></h1></header>
+    <header class="page-header"><h1 class="page-title"><?php echo i18n("Search");?>: <?php echo $search->title;?></h1></header>
 <?php endif;?>
 <?php if (isset($is_type)):?>
     <header class="page-header"><h1 class="page-title">Type: <?php echo ucfirst($type->title);?></h1></header>
@@ -28,8 +28,8 @@
 			<?php }?>
 			</h2><!-- /.post__title -->
 
-			<span class="post__date">Posted <a href="<?php echo $p->url;?>"><time class="entry-date published updated"><?php echo format_date($p->date) ?></time></a> by 
-			<a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> in 
+			<span class="post__date"><?php echo i18n("Posted_on");?> <a href="<?php echo $p->url;?>"><time class="entry-date published updated"><?php echo format_date($p->date) ?></time></a> <?php echo i18n("by");?> 
+			<a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> - 
 			<?php echo $p->category;?>
 			<?php if (login()) { echo '<span class="sep"> |</span> <span><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
 			</span>
@@ -80,11 +80,11 @@
 <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
 <nav class="pagination">
 	<?php if (!empty($pagination['prev'])): ?>						
-	<a href="?page=<?php echo $page - 1 ?>" class="pagination__item pagination__item--previous">Next</a>
+	<a href="?page=<?php echo $page - 1 ?>" class="pagination__item pagination__item--previous"><?php echo i18n("Next");?></a>
 	<?php endif; ?>
 
 	<?php if (!empty($pagination['next'])): ?>
-	<a href="?page=<?php echo $page + 1 ?>" class="pagination__item pagination__item--next">Previous</a>
+	<a href="?page=<?php echo $page + 1 ?>" class="pagination__item pagination__item--next"><?php echo i18n("Prev");?></a>
 	<?php endif; ?>
 
 	<span class="pagination__stats"><?php echo $pagination['pagenum'];?></span>

@@ -11,7 +11,7 @@
 		<div class="page-header">
         <?php echo $about ?>
 		</div>
-        <h2 class="post-index">Posts by this author</h2>
+        <h2 class="post-index"><?php echo i18n('Post_by_author');?></h2>
         <?php if (!empty($posts)) { ?>
             <ul class="post-list">
                 <?php foreach ($posts as $p): ?>
@@ -29,11 +29,11 @@
 <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
 <nav class="pagination">
 	<?php if (!empty($pagination['prev'])): ?>						
-	<a href="?page=<?php echo $page - 1 ?>" class="pagination__item pagination__item--previous">Next</a>
+	<a href="?page=<?php echo $page - 1 ?>" class="pagination__item pagination__item--previous"><?php echo i18n('Next');?></a>
 	<?php endif; ?>
 
 	<?php if (!empty($pagination['next'])): ?>
-	<a href="?page=<?php echo $page + 1 ?>" class="pagination__item pagination__item--next">Previous</a>
+	<a href="?page=<?php echo $page + 1 ?>" class="pagination__item pagination__item--next"><?php echo i18n('Prev');?></a>
 	<?php endif; ?>
 
 	<span class="pagination__stats"><?php echo $pagination['pagenum'];?></span>

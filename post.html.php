@@ -12,8 +12,8 @@
 		<?php }?>
 		</h1><!-- /.post__title -->
 
-		<span class="post__date">Posted <a href="<?php echo $p->url;?>"><time class="entry-date published updated"><?php echo format_date($p->date) ?></time></a> by 
-		<a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> in 
+		<span class="post__date"><?php echo i18n("Posted_on");?> <a href="<?php echo $p->url;?>"><time class="entry-date published updated"><?php echo format_date($p->date) ?></time></a> <?php echo i18n("by");?> 
+		<a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> - 
 		<?php echo $p->category;?>
 		<?php if (login()) { echo '<span class="sep"> |</span> <span><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
 		</span>
@@ -70,14 +70,19 @@
 </div>
 <?php endif; ?>
 
+<div class="related entry-content">
+	<h3><strong><?php echo i18n('Related_posts');?></strong></h3>
+	<?php echo get_related($p->related);?>
+</div>
+
 <?php if (!empty($next) || !empty($prev)): ?>
 <nav class="pagination">
 	<?php if (!empty($next)): ?>						
-	<a href="<?php echo($next['url']); ?>" class="pagination__item pagination__item--previous">Next post</a>
+	<a href="<?php echo($next['url']); ?>" class="pagination__item pagination__item--previous"><?php echo i18n("Next_post");?></a>
 	<?php endif; ?>
 
 	<?php if (!empty($prev)): ?>
-	<a href="<?php echo($prev['url']); ?>" class="pagination__item pagination__item--next">Previous post</a>
+	<a href="<?php echo($prev['url']); ?>" class="pagination__item pagination__item--next"><?php echo i18n("Prev_post");?></a>
 	<?php endif; ?>
 </nav>
 <?php endif; ?>

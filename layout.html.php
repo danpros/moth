@@ -26,7 +26,7 @@
 
 
 						<form accept-charset="utf-8" class="search">
-							<input type="search" name="search" placeholder="Search" class="search__field">
+							<input type="search" name="search" placeholder="<?php echo i18n("Search");?>" class="search__field">
 							<i class="icon-search search__icon"></i>
 						</form><!-- /.search -->
 
@@ -73,7 +73,7 @@
 		</footer><!-- /.footer -->
 	</div><!-- /.wrapper -->
 
-	<script src="<?php echo site_url();?>themes/moth/js/jquery.js"></script>
-	<script src="<?php echo site_url();?>themes/moth/js/theme.js"></script>
+	<script src="<?php echo theme_path();?>js/jquery.js"></script>
+	<script src="<?php echo theme_path();?>js/theme.js"></script>
     <?php if (analytics()): ?><?php echo analytics() ?><?php endif; ?>
 </body></html>
