@@ -7,11 +7,12 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="<?php echo $description; ?>"/>
     <link rel="canonical" href="<?php echo $canonical; ?>" />
+    <?php echo $metatags;?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo Narrow:300,400,700">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika Negative:300,400,700">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue:300,400,700">
-	<link rel="stylesheet" href="<?php echo theme_path();?>css/moth.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Signika Negative:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica Neue:300,400,700">
+    <link rel="stylesheet" href="<?php echo theme_path();?>css/moth.css">
 </head>
 <body class="index">
 <?php if (facebook()) { echo facebook(); } ?>
