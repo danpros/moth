@@ -31,7 +31,7 @@
 			<span class="post__date"><?php echo i18n("Posted_on");?> <a href="<?php echo $p->url;?>"><time class="entry-date published updated"><?php echo format_date($p->date) ?></time></a> <?php echo i18n("by");?> 
 			<a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a> - 
 			<?php echo $p->category;?>
-			<?php if (login()) { echo '<span class="sep"> |</span> <span><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
+			<?php if (authorized($p)) { echo '<span class="sep"> |</span> <span><a href="'. $p->url .'/edit?destination=post">Edit</a></span>'; } ?>
 			</span>
 		</header><!-- /.post__header -->
 		
